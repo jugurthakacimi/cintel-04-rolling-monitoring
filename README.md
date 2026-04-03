@@ -129,3 +129,10 @@ git push -u origin main
 
 - Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
 - Use `CTRL+f` to find (and replace) text within a file.
+
+
+## Technical Modification
+In this project, we added a new rolling signal: the rolling mean of the error rate.
+The error rate is computed as the number of errors divided by the number of requests.
+Then, we compute the rolling mean of the error rate using the same window size as the other signals.
+This allows us to monitor not only the absolute number of errors but also the proportion of requests that are resulting in errors, which can be a more informative signal for monitoring system performance.
